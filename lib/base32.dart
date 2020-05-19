@@ -167,7 +167,7 @@ class base32 {
   }
 
   static bool _isValid(String b32str) {
-    if (b32str.length % 2 != 0 || !_base32Regex.hasMatch(b32str)) {
+    if (!_base32Regex.hasMatch(b32str)) {
       return false;
     }
     return true;
